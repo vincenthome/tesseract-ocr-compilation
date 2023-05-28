@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker exec -it t4cmp scripts/repos_update.sh
+docker exec -it tesseract-ocr scripts/repos_update.sh
  

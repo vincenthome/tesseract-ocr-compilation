@@ -1,0 +1,1 @@
+docker exec -it tesseract-ocr tesseract \-v

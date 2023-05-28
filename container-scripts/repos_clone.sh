@@ -6,5 +6,4 @@
 git clone ${LEP_REPO_URL} ${LEP_SRC_DIR}
 # Tesseract
 # RUN git ls-remote ${TES_REPO_URL} HEAD
-git clone ${TES_REPO_URL} ${TES_SRC_DIR}
-
+git clone -b ${TES_REPO_RELEASE_TAG} --depth 1 ${TES_REPO_URL} ${TES_SRC_DIR}

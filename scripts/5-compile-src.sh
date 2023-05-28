@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker exec -it t4cmp sh scripts/compile_leptonica.sh && \
-docker exec -it t4cmp sh scripts/compile_tesseract.sh && \
-docker exec -it t4cmp tesseract \-v
+docker exec -it tesseract-ocr sh scripts/compile_leptonica.sh && \
+docker exec -it tesseract-ocr sh scripts/compile_tesseract.sh && \
+docker exec -it tesseract-ocr tesseract \-v

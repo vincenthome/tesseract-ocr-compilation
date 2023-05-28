@@ -1,5 +1,5 @@
 #!/bin/bash
 
 docker ps
-docker stop t4cmp
-docker rm t4cmp
+docker stop tesseract-ocr
+docker rm tesseract-ocr
