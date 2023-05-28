@@ -10,11 +10,11 @@ docker exec -it tesseract-ocr tesseract \--list-langs
 # Base OCR test
 docker exec -it tesseract-ocr /bin/bash -c "echo ====; mkdir ./ocr-files/; cd ./ocr-files/; pwd; \
 rm phototest.*; echo ====; \
-echo downloading test file:; wget -O phototest.tif https://github.com/tesseract-shadow/tesseract-ocr-re/blob/master/scripts/ocr-files/phototest.tif?raw=true;  \
+echo downloading test file:; wget -O phototest.tif https://github.com/vincenthome/tesseract-ocr-compilation/blob/master/test-images/problem.tif?raw=true;  \
 tesseract phototest.tif phototest; \
 head -100 phototest.txt; \
 echo Compare the text above ^^^ with the source image: \ 
-echo https://github.com/tesseract-shadow/tesseract-ocr-re/blob/master/scripts/ocr-files/phototest.tif?raw=true"
+echo https://github.com/vincenthome/tesseract-ocr-compilation/blob/master/test-images/problem.tif?raw=true"
 
 # Process and copy files to ./ocr-files/ directory
 docker exec -it tesseract-ocr /bin/bash -c "cd ./ocr-files/; tesseract phototest.tif phototest -l eng --psm 1 --oem 2 pdf hocr"
