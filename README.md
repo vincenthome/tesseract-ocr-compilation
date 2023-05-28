@@ -17,7 +17,7 @@ Scripted steps (tested as a root `sudo su`):
 1. `./scripts/1-opt-remove-container.sh` - (optional) remove **tesseract-ocr** if it already exists and you want to start from begining (note, all compilation results stored inside container will be lost).
 2. `./scripts/2-run-new-container.sh` - run the new **tesseract-ocr** container.
 3. `./scripts/3-opt-show-ocr-info.sh` - show ocr version info
-4. `./scripts/4-test-ocr.sh` - do some OCR tests
+4. `./scripts/4-test-ocr.sh image_url` - do some OCR tests. 1st argument is image url e.g. https://github.com/vincenthome/tesseract-ocr-compilation/blob/master/test-images/problem.tif?raw=true
 5. `./scripts/5-opt-build-pkg.sh` - (optional) build Leptionica and Tesseract packages and copy them outside **tesseract-ocr** container
 6. `./scripts/x-pull-container.sh` - pull **tesseractshadow/tesseract4cmp** image from [Docker Hub](https://hub.docker.com/r/tesseractshadow/tesseract4cmp/) (automated build using dockerfile from this repository).
 7. `./scripts/x-update-src.sh` - update source code of Leptionica and Tesseract.
